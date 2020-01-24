@@ -1,0 +1,71 @@
+{% extends "base.html" %} {% block navigation %}
+<li class="nav-item active" style="padding-left:20px"><a class="nav-link actlink" href="{{ url_for('index')}}">Home<span class="sr-only">(current)</span></a></li>
+<li class="nav-item" style="padding-left:20px"><a class="nav-link" href="{{ url_for('project')}}">My projects</a></li>
+<li class="nav-item" style="padding-left:20px"><a class="nav-link" href="{{ url_for('about')}}">About Me</a></li>
+<li class="nav-item" style="padding-left:20px"><a class="nav-link" href="{{ url_for('contact')}}">Contact Me</a></li>
+{% endblock %} {% block underleft%}
+<div class="card-body">
+    <h5 class="card-title">Are you looking for a web developer, Database and Networking administator?
+    </h5>
+    <p class="card-text">Here, you are. I am a self-motivated person, hard-worker, punctual and capable of working under minimal or no supervision.</p>
+
+    <a href="{{ url_for('contact') }}" class="btn btn-outline-warning  btn-sm">You can contact me!</a>
+    <a href="{{ url_for('project') }}" class="btn btn-outline-warning  btn-sm">View some of my projects</a>
+
+</div>
+
+{% endblock %} {% block content %}
+
+<div class="jumbotron jumbotron-fluid" style="color: darkcyan;">
+    <div class="container">
+        <h1>Welcome to my online portfolio!</h1>
+        <p style="font-size:32px;">I am Niyomwungeri Parmenide ISHIMWE, <br> a software developer based in Kigali, RWANDA.</p>
+    </div>
+</div>
+<div class="dropdown-divider"></div>
+
+<div class="card">
+
+    <div id="my_slide" class="carousel col-md-12 slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#my_slide" data-slide-to="0" class="active"></li>
+            <li data-target="#my_slide" data-slide-to="1"></li>
+            <li data-target="#my_slide" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <!-- Image sliding -->
+            <div class="carousel-item active" alt="projects">
+                <img src="../static/images/ipntechblog.jpg" alt="IPN image" width="100%" height="100%">
+                <div class="carousel-caption" style="color: rgb(241, 248, 252);">
+                    <h3>IPNtech Blog</h3>
+                    <p>A blog that contain technological knowledge.</p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="../static/images/price.jpg" alt="PRICE image" width="100%" height="100%">
+                <div class="carousel-caption" style="color: rgb(241, 248, 252);">
+                    <h3>NAEB/PRICE</h3>
+                    <p>A web application for NAEB/PRICE project</p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="../static/images/carrenting.jpg" alt="Car image" width="100%" height="100%">
+                <div class="carousel-caption" style="color:  rgb(241, 248, 252);">
+                    <h3>CAR RENTAL APP</h3>
+                    <p>A car rental application</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#my_slide" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#my_slide" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>{% endblock%}

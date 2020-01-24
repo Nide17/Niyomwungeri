@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block navigation %}
+<li class="nav-item" style="padding-left:20px"><a class="nav-link" href="{{ url_for('index')}}">Home</a></li>
+<li class="nav-item" style="padding-left:20px"><a class="nav-link" href="{{ url_for('project')}}">My projects</a></li>
+<li class="nav-item" style="padding-left:20px"><a class="nav-link" href="{{ url_for('about')}}">About Me</a></li>
+<li class="nav-item active" style="padding-left:20px"><a class="nav-link" href="{{ url_for('contact')}}">Contact Me</a></li>
+{% endblock %} {% block underleft %}
+<div class="dropdown-divider"></div>
+<div class="card bg-success text-white">
+    <div class="card-body">I develop in Python, PHP-MySQL, HTML/CSS, Bootstrap, JavaScript, Node.js, React.js, Java, Networking, Databases management, Internet of things.
+    </div>
+</div>
+<div class="dropdown-divider"></div>
+
+<a href="{{ url_for('contact') }}" class="btn btn-outline-warning  btn-sm">Please get in touch with me!</a>
+<a href="{{ url_for('project') }}" class="btn btn-outline-warning  btn-sm">View some of my projects</a> {% endblock %} {% block content %}
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Contact me here</h4>
+        <form action="/message" method="post">
+            <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" class="form-control" id="username" name="username">
+                <label for="email">Your Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+                <label for="message">Your message</label>
+                <textarea class="form-control" rows="5" id="message" name="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</div>
+<div class="dropdown-divider"></div>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">My address and social media</h4>
+        <p class="card-text" style="font-size:12px; color: #1B4F72">
+            <i class="fa fa-map-marker"></i><a href="#" class="map-marker">&nbsp;&nbsp;Kicukiro-Gatenga, Kigali</a><br/>
+            <i class="fa fa-phone"></i><a href="#" class="phone">&nbsp;&nbsp;(+250) 786791577 / 788551997</a><br/>
+            <i class="fa fa-whatsapp"></i><a href="#" class="whatsapp">&nbsp;&nbsp;(+250) 786791577</a><br/>
+            <i class="fa fa-envelope"></i><a href="mailto:nidedrogba@gmail.com" class="envelope">&nbsp;&nbsp;nidedrogba@gmail.com</a><br/>
+            <i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/niyomwungeri-parmenide-ishimwe-1a5394123/" class="linkedin">&nbsp;&nbsp;Niyomwungeri Parmenide Ishimwe</a><br/>
+            <i class="fa fa-facebook"></i><a href="https://www.facebook.com/nide.drogba.7" class="facebook card-link">&nbsp;&nbsp;Ishimwe Parmenide</a><br/>
+            <i class="fa fa-instagram"></i><a href="https://www.instagram.com/ishimwe_parmenide" class="instagram">&nbsp;&nbsp;ishimwe_parmenide</a><br/>
+            <i class="fa fa-twitter"></i><a href="https://www.twitter.com/@ishimweparmenid" class="twitter">&nbsp;&nbsp;Niyomwungeri Parmenide Ishimwe</a><br/>
+            <i class="fa fa-skype"></i><a href="https://www.skype.com/nidedrogba" class="skype">&nbsp;&nbsp;nidedrogba</a><br/>
+
+        </p>
+    </div>
+</div>
+{% endblock%}

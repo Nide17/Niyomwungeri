@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}Niyomwungeri Portfolio</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon-icon/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../static/mystyles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mystyles.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap4/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/assets/font-awesome/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../static/bootstrap4/ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="../static/bootstrap4/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script src="../static/bootstrap4/cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container-fluid ">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#1B4F72; margin-top:10px;">
+
+                <!-- Brand/logo -->
+                <a class="navbar-brand" href="{{ url_for('index')}}" style="font-size:2vw"> Niyomwungeri Parmenide
+                    ISHIMWE </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        {% block navigation %} {% endblock %}
+                    </ul>
+                    <!-- Blog -->
+                    <button type="button" class="btn btn-outline-info"><a href="http://ipntechblog.com/" style="color: aquamarine;">My Blog</a></button>
+
+                </div>
+            </nav>
+        </header>
+
+        <main style="background-color:rgb(84, 119, 143);">
+
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="zoom">
+                            <img class="img-fluid card-img-top" src="../static/images/profile1.jpg" alt="NIDE image" style="width:100%">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Welcome</h4>
+                            <p class="card-text">I am a web developer, Database and Networking administator.</p>
+                            <a style="float:right;" href="http://ipntechblog.com/" class="btn btn-outline-info btn-sm">Check my blog</a>
+                            <a href="{{ url_for('about')}}" class="btn btn-info btn-sm">Full Profile</a>
+                        </div>
+                    </div>
+
+                    {% block underleft%} {% endblock %}
+                </div>
+
+                <div class="col-lg-8 col-sm-12">
+                    {% block content %} {% endblock%}
+
+                </div>
+            </div>
+        </main>
+
+        <!--start footer-->
+        <footer id="myFooter" style="background-color: #1B4F72;">
+            <div class="row">
+
+                <div class="col-sm-2" style="margin-left: 30px;">
+                    <h4>More info..</h4>
+                    <ul>
+                        <li><a href="{{ url_for('about') }}">About me</a></li>
+                        <li><a href="{{ url_for('index') }}">FAQs</a></li>
+                        <li><a href="{{ url_for('index') }}">Terms of use</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-2">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="{{ url_for('index') }}">Web development</a></li>
+                        <li><a href="{{ url_for('index') }}">Software development</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4">
+                    <h4>I am on social Media</h4>
+
+                    <div class="social-networks">
+                        <a href="https://www.github.com/Nide17" class="github"><i
+                                            class="fa fa-github"></i></a>
+                        <a href="mailto:nidedrogba@gmail.com" class="envelope"><i
+                                                class="fa fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/niyomwungeri-parmenide-ishimwe-1a5394123/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        <a class="whatsapp"><i class="fa fa-whatsapp" data-toggle="modal"
+                                            data-target="#myModal"></i></a>
+                        <a href="https://web.facebook.com/nide.drogba.7" class="facebook"><i
+                                            class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/ishimwe_parmenide" class="instagram"><i
+                                            class="fa fa-instagram"></i></a>
+                        <a href="https://www.twitter.com/@ishimweparmenid" class="twitter"><i
+                                            class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <h4>Subscribe to my newsletter</h4>
+                    <form action="/subscribe" method="post">
+                        <div class="form-group">
+                            <input class="form-control" name="email" type="email" placeholder="E-mail" required>
+                        </div>
+                        <button class="btn btn-success" type="submit">Subscribe</button>
+                    </form>
+
+                </div>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Call or text me on:</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <strong> +250786791577</strong>
+                                <div class="dropdown-divider"></div>
+                                <strong>+250788551997</strong>
+                            </div>
+                            <div class="modal-header">
+                                <h4 class="modal-title">WhatsApp me on:</h4>
+                            </div>
+                            <div class="modal-body">
+                                <strong> +250786791577 </strong>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>© 2020 Copyright Niyomwungeri</p>
+            </div>
+        </footer>
+        <!--end footer -->
+
+    </div>
+
+</body>
+
+</html>

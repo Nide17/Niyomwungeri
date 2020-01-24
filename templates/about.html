@@ -1,0 +1,101 @@
+{% extends "base.html" %} {% block navigation %}
+<li class="nav-item" style="padding-left:20px"><a class="nav-link" href="{{ url_for('index')}}">Home</a></li>
+<li class="nav-item" style="padding-left:20px"><a class="nav-link" href="{{ url_for('project')}}">My projects</a></li>
+<li class="nav-item active" style="padding-left:20px"><a class="nav-link" href="{{ url_for('about')}}">About Me</a></li>
+<li class="nav-item" style="padding-left:20px"><a class="nav-link" href="{{ url_for('contact')}}">Contact Me</a></li>
+{% endblock %} {% block underleft%}
+
+<div class="dropdown-divider"></div>
+<h4 class="card-title">ACHIEVEMENTS</h4>
+<p class="card-text">
+    <div class="list-group certificates">
+        <a href="https://cs50.harvard.edu/certificates/96ead0af-59ee-4101-935d-517482866af3" class="list-group-item list-group-item-action" style="margin-bottom: 5px;">HarvardX: CS50W CS50's Web Programming with
+            Python and JavaScript certificate</a>
+        <a href="https://drive.google.com/open?id=1viHvsjr7xFpcPu-Wnw_uIM0hAaX_hSil" class="list-group-item list-group-item-action" style="margin-bottom: 5px;">Bachelor’s degree (HONS) in Computer Science</a>
+        <a href="https://drive.google.com/open?id=1G54lkIAN6u9xMyq5YrgYcY5YT_zluKLF" class="list-group-item list-group-item-action" style="margin-bottom: 5px;">Certificate of merit of short-course on Rapid
+            Prototyping
+            for IoT</a>
+        <a href="https://drive.google.com/open?id=1oB94qMIFbiljIK8VIQoD48LUVAflvh16" class="list-group-item list-group-item-action" style="margin-bottom: 5px;">Certificate of completion of IEEE
+            Entrepreneurship
+            Workshop for Scientists and Engineers </a>
+        <a href="https://drive.google.com/open?id=1JihW1zBuq3H49dCYfgpI3fzpxtycN1PF" class="list-group-item list-group-item-action" style="margin-bottom: 5px;">OpenClassrooms all certificates</a>
+        <a href="https://drive.google.com/open?id=1ESfjgJioTESlnfmiZM0koSAF-voqdbYA" class="list-group-item list-group-item-action" style="margin-bottom: 5px;">Certificate of completion of Sololearn PHP
+            Tutorial course</a>
+        <a href="https://drive.google.com/open?id=1Vm4iPqV6iOtpTsEG8PWZ5sSX61ffEeVF" class="list-group-item list-group-item-action" style="margin-bottom: 5px;">Certificate of completion of Sololearn Java
+            Tutorial course</a>
+        <a href="https://drive.google.com/open?id=1CIu6pIxdquSuCqoO8v7vJ_RQ-82G3l06" class="list-group-item list-group-item-action" style="margin-bottom: 5px;">Certificate of completion of Sololearn Python 3
+            Tutorial course</a>
+        <a href="https://drive.google.com/open?id=1wRARzepSkLeojqPRuqPBy6iaZ_RT8_2a" class="list-group-item list-group-item-action" style="margin-bottom: 5px;">Certificate of completion of Sololearn SQL
+            Fundamentals course</a>
+        <a href="https://drive.google.com/open?id=1Wb5qp-9W-PykJcGp-VxnGJRViUMOQ1Y7" class="list-group-item list-group-item-action" style="margin-bottom: 5px;">Certificate of completion of Sololearn JavaScript
+            Tutorial course</a>
+        <a href="https://drive.google.com/open?id=1lT5KZ83XqbC1yUHiiHOQdFYEA54rxGF9" class="list-group-item list-group-item-action" style="margin-bottom: 5px;">Certificate of completion of Sololearn HTML
+            Fundamentals course</a>
+        <a href="https://drive.google.com/open?id=1ClmzQfBbPGC5I9pt7tt5-TeEo-QYe15_" class="list-group-item list-group-item-action">Certificate of completion of Sololearn CSS
+            Fundamentals course</a>
+    </div>
+</p>
+
+{% endblock %} {% block content %}
+<h4 class="card-title">DETAILS</h4>
+<div class="card">
+    <div class="card-body">
+        <p class="card-text">
+            I develop in Python, PHP-MySQL, HTML/CSS, Bootstrap, JavaScript, Node.js, React.js, Java, Networking, Databases management, Internet of things.
+            <br>
+            <div class="dropdown-divider"></div>
+            <img src="../static/images/python.jpg" class="zoom" class="img-fluid rounded-circle mx-auto" width="236" height="236">
+            <img src="../static/images/map.jpg" class="zoom" class="img-fluid rounded-circle mx-auto" width="236" height="236">
+            <img src="../static/images/arcgis.jpg" class="zoom" class="img-fluid rounded-circle mx-auto" width="236" height="236">
+            <br>
+            <div class="dropdown-divider"></div>
+            I have good skills with GIS in ArcGIS with ArcMap, Microsoft Office, Adobe Photoshop, Android Studio and so on.
+        </p>
+
+    </div>
+</div>
+
+<div class="dropdown-divider"></div>
+<h4 class="card-title">EXPERIENCES</h4>
+
+<div class="card">
+    <div class="card-body">
+        <p class="card-text">
+
+            I also took HarvardX: CS50W CS50's Web Programming with Python and JavaScript course with the sponsorship of RISA and African App Launchpad (AAL) on EDX platform.
+            <div class="dropdown-divider"></div>
+
+            I gained considerable practical skills from an online software development course I took on <a href="https://drive.google.com/open?id=1JihW1zBuq3H49dCYfgpI3fzpxtycN1PF">OpenClassrooms platform</a> with the sponsorship of the Andela Learning
+            Community in Rwanda.
+            <div class="dropdown-divider"></div>
+
+            I am a University of Rwanda graduate with a bachelor (honors) degree in Computer Science.<a href="https://drive.google.com/open?id=197ZC652dUamR9VBbiAOnHuhXKNjlu6uq">My degree </a>gave me an excellent combination of skills and knowledge of
+            Computer Networking, Software Development, Database Systems, SQL programming languages and a great combination of computer hardware and software skills.
+            <div class="dropdown-divider"></div>
+
+            I has completed a five-day <a href="https://drive.google.com/open?id=1G54lkIAN6u9xMyq5YrgYcY5YT_zluKLF">short-course</a> on Rapid Prototyping for IoT from April 23rd to 27th, 2018 organised by the University of Rwanda, College of Science and
+            Technology’s African Center of Excellence in Internet of Things (ACEIoT) in conjunction with WAZIUP.
+            <div class="dropdown-divider"></div>
+
+            I attended a 5-day IEEE Entrepreneurship <a href="https://drive.google.com/open?id=1oB94qMIFbiljIK8VIQoD48LUVAflvh16">Workshop </a>for Scientists and Engineers, organized by IEEE, International Centrefor Theoretical Physics and East African
+            Institute for Fundamental Research, conducted from May 14 to 18 at the University of Rwanda, Kigali.
+            <div class="dropdown-divider"></div>
+
+            I have done a 3 month-internship in NAEB-PRICE where I was responsible of making a <a href="http://www.carrenting.cf/">web application</a> that helps to store and retrieving data about the farmers.
+            <div class="dropdown-divider"></div>
+
+            In addition, I have experience in computer and software maintenance, computer networking, web development and database systems gained from that academic internship, my final year project, and other personal projects.
+            <div class="dropdown-divider"></div>
+
+            Therefore, all these gave me sufficient Database administration, software development and IT skills that can be useful for the growth of any organization.
+            <div class="dropdown-divider"></div>
+
+            Furthermore, I have a professional experience of <a href="https://drive.google.com/open?id=1V9T6rdpD-SjS_9_HPmTr_4IFlkMc3Lcg">about 4 years</a> of using Microsoft office word, excel and PowerPoint gained while doing a data entry officer job
+            at NAEB/PRICE. I am able to work under little or no supervision. I am a team player, hard worker, honest, persistent person, with good communication and commitment.
+            <div class="dropdown-divider"></div>
+
+            I speak English <a href="https://drive.google.com/open?id=1-4tlwZ0XGN-YOdTgWAu7qlra21bcq8fi">(IELTS: 6.0 certificate)</a> and Kinyarwanda fluently and basic French.
+        </p>
+    </div>
+</div>
+{% endblock%}

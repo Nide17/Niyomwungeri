@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block navigation %}
+<li class="nav-item" style="padding-left:20px"><a class="nav-link" href="{{ url_for('index')}}">Home</a></li>
+<li class="nav-item active" style="padding-left:20px"><a class="nav-link actlink" href="{{ url_for('project')}}">My projects</a></li>
+<li class="nav-item" style="padding-left:20px"><a class="nav-link" href="{{ url_for('about')}}">About Me</a></li>
+<li class="nav-item" style="padding-left:20px"><a class="nav-link" href="{{ url_for('contact')}}">Contact Me</a></li>
+{% endblock %} {% block content %}
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">PROJECTS</h4>
+        <p class="card-text">My projects are most based on technologies such as HTML/CSS, PHP/MySQL, JavaSCript/React and Python/Flask. My first project (NAEB/PRICE app) was based on PHP/MYSQL. The idea of the project was to store the information about farmers and to retrieve
+            them easily and anytime. The main feature is that you can retrieve data about farmers according to which location you selected. It was done using basic PHP, MySQL, AJAX, JAVASCRIPT and of course HTML and CSS.
+        </p>
+        <i class="fa fa-coffee"></i><a href="http://www.naebpriceapp.cf/" class="whatsapp">Check it here</a>
+    </div>
+</div>
+<div class="dropdown-divider"></div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Check others here</h5>
+        <p class="card-text">
+            <div class="list-group" style="font-size: 16px;">
+                <a href="https://www.github.com/Nide17" class="list-group-item list-group-item-action"><i class="fa fa-github"></i>MY GITHUB REPOSITORIES</a>
+                <a href="http://ipntechblog.com/" class="list-group-item list-group-item-action"><i class="fa fa-code"></i>MY OFFICIAL BLOG</a>
+                <a href="http://www.carrenting.cf/" class="list-group-item list-group-item-action"><i class="fa fa-car"></i>CAR RENTAL SYSTEM</a>
+                <a href="https://nide17.github.io/UpcomingArtistsWebApp/" class="list-group-item list-group-item-action"><i class="fa fa-music"></i>UPCOMING ARTISTS
+                    APP</a>
+            </div>
+        </p>
+    </div>
+</div>
+{% endblock%}
