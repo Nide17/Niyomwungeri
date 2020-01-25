@@ -1,0 +1,43 @@
+========================================================================
+DB
+========================================================================
+
+export DATABASE_URL='postgres://zizlhidxlxjeop:5da203154b3231ee873162a1974ded64ec5b6abee932368d12c257aadd49e50f@ec2-174-129-214-193.compute-1.amazonaws.com:5432/d1cbruttb80i72'
+
+
+Host
+ec2-174-129-214-193.compute-1.amazonaws.com
+
+Database
+d1cbruttb80i72
+
+User
+zizlhidxlxjeop
+
+Port
+5432
+
+Password
+5da203154b3231ee873162a1974ded64ec5b6abee932368d12c257aadd49e50f
+
+URI
+postgres://zizlhidxlxjeop:5da203154b3231ee873162a1974ded64ec5b6abee932368d12c257aadd49e50f@ec2-174-129-214-193.compute-1.amazonaws.com:5432/d1cbruttb80i72
+
+Heroku CLI
+heroku pg:psql postgresql-curly-49046 --app niyomwungeri
+
+
+
+CREATE TABLE messages (msg_id SERIAL PRIMARY KEY,
+    username character varying NOT NULL,
+    email character varying NOT NULL,
+    msg_content character varying NOT NULL,
+    msg_time timestamp);
+
+
+CREATE TABLE subscribers
+(
+    sub_id SERIAL PRIMARY KEY,
+    email character varying NOT NULL,
+    sub_time timestamp
+);

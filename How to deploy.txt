@@ -6,7 +6,10 @@
 
 -Create an app on Heroku: heroku create appname
 
--deploy your code: git push heroku master
+-deploy your code: -git init
+$ heroku git:remote -a niyomwungeri
+-heroku git:remote -a niyomwungeri
+-git push heroku master
 
 -Ensure that at least one instance of the app is running: heroku ps:scale web=1
 
