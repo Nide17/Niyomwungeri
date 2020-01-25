@@ -4,7 +4,7 @@
 
 -log in to the Heroku CLI: heroku login
 
--Create an app on Heroku: heroku create
+-Create an app on Heroku: heroku create appname
 
 -deploy your code: git push heroku master
 
